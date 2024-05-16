@@ -1,0 +1,120 @@
+.loading {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 2000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 2000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: ease all 0.3s;
+  opacity: 1;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.chart-container {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.category ul {
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  gap: 10px;
+  li {
+    button {
+      background: none;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 45px;
+      cursor: pointer;
+      background: #f9f9f9;
+      font-size: 18px;
+      &.click {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}
+#hook ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8rem;
+  li {
+    .img {
+      border-radius: 2.4rem;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      img {
+        transition: 0.35s;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
